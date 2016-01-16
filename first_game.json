@@ -1,0 +1,75 @@
+{
+  "bigPicture": "A galactic empire drifts apart",
+  "focuses": [
+    {
+      "focus": "outsiders",
+      "player": "curt"
+    },
+    {
+      "focus": "peaceful revolution",
+      "player": "kat"
+    }
+  ],
+  "palette": {
+    "adds" : [
+      "q continuum types (demi gods)",
+      "\"pre warm\" humans",
+      "\"babelfish\""
+    ],
+    "bans": [
+      "infinte power, in people or beings",
+      "time travel"
+    ]
+  },
+  "legacies": [
+    {
+      "legacy": "TRAITORS ARE ALWAYS, WITHOUT FAIL, NO EXCEPTIONS PUNISHED BY DEMI GODS",
+      "player": "anastasia"
+    }
+  ],
+
+  "periods" : [
+    {
+      "period" : "The empire fights a war that sows the first seeds of dissent",
+      "tone" : "dark",
+      "events" : [
+        {
+          "event" : "An outsider traitor warns the Empire",
+          "tone" : "dark"
+        },
+        {
+          "event" : "Empire rejects gift from outsiders",
+          "tone" : "light",
+          "scenes" : [
+            {
+              "question" : "Why is the Empire receiving a gift from the outsiders",
+              "setting" : "With the outsider leader in their palace. After Empire's rejection.",
+              "notes" : "The messenger is \"Zara\"con, from another scene.",
+              "requiredCharacters" : [
+                {
+                  "character": "Outsider Queen",
+                  "thoughts" : "Anticipates an abundance of destruction"
+                },
+                {
+                  "character" : "Outsider Guard Captain",
+                  "thoughts" : "Enjoys downtime"
+                },
+                {
+                  "character" : "Spritual Leader",
+                  "thoughts" : "This administration is immoral!"
+                },
+                {
+                  "character": "Messenger",
+                  "thoughts" : "Nervous about the fate they are about to receive and begin to feel angry about the Empire."
+                }
+              ],
+              "plot" : "Meeting has been announced. Spirtual Leader was not invited. He is furious and on his way there. Messenger gives news that the gift has been rejected. Spiritual Leader busts in and accuses Outsider Queen of not doing enough. Outsider Queen calls out Outside Guard Captain for not doing his job and keeping the rabble out. Outsider Guard Captain defends Spiritual Leader. Outsider Queen is apprehensive to go to war. The Empire is weak and the Outsider Queen and Spiritual Leader agree on this. The Outsider Queen wants to play the long game and have the Empire destroy themselves from within.",
+              "answer" : "The gift was supposed to sow internal discord so that the Empire ends up destroying themselves."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+
+}
