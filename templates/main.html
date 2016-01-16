@@ -33,40 +33,46 @@
 </legacies>
 
 <periods>
+
     <h2>Periods</h2>
     {{#each periods}}
-    <h3>{{this.period}}</h3>
-    <i class="{{this.tone}}">{{this.tone}}</i>
+    <period>
+        <h3>{{this.period}}</h3>
+        <i class="{{this.tone}}">{{this.tone}}</i>
 
         {{#each this.events}}
         <event>
-        <h4>{{this.event}}</h4>
-        <i class="{{this.tone}}">{{this.tone}}</i>
+            <h4>{{this.event}}</h4>
+            <i class="{{this.tone}}">{{this.tone}}</i>
 
             {{#each this.scenes}}
             <scene>
-            <h5>{{this.question}}</h5>
-            <h5>{{this.answer}}</h5>
-            <i class="{{this.tone}}">{{this.tone}}</i>
+                <h5>{{this.question}}</h5>
+                <h5>{{this.answer}}</h5>
+                <i class="{{this.tone}}">{{this.tone}}</i>
 
-            <h6>Setting</h6>
-            <p>{{this.setting}}</p>
+                <h6>Setting</h6>
 
-            <h6>Notes</h6>
-            <p>{{this.notes}}</p>
+                <p>{{this.setting}}</p>
 
-            <h6>Required Characters</h6>
-                {{#each this.requiredCharacters}}
+                <h6>Notes</h6>
+
+                <p>{{this.notes}}</p>
+
+                <h6>Characters</h6>
+                {{#each this.characters}}
                 <li>{{this.character}}, <em>{{this.thoughts}}</em></li>
                 {{/each}}
 
-            <h6>Plot</h6>
-            <p>{{this.plot}}</p>
-            {{/each}}
+                <h6>Plot</h6>
+
+                <p>{{this.plot}}</p>
+                {{/each}}
             </scene>
         </event>
         {{/each}}
 
-
+    </period>
     {{/each}}
+
 </periods>

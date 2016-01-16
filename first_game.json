@@ -11,7 +11,7 @@
     }
   ],
   "palette": {
-    "adds" : [
+    "adds": [
       "q continuum types (demi gods)",
       "\"pre warm\" humans",
       "\"babelfish\""
@@ -27,57 +27,156 @@
       "player": "anastasia"
     }
   ],
-
-  "periods" : [
+  "periods": [
     {
-      "period" : "The empire fights a war that sows the first seeds of dissent",
-      "bookend" : true,
-      "tone" : "dark",
-      "events" : [
+      "period": "The Empire fights a war that sows the first seeds of dissent",
+      "bookend": "start",
+      "tone": "dark",
+      "events": [
         {
-          "event" : "An outsider traitor warns the Empire",
-          "tone" : "dark"
+          "event": "An outsider traitor warns the Empire",
+          "tone": "dark"
         },
         {
-          "event" : "Empire rejects gift from outsiders",
-          "tone" : "light",
-          "scenes" : [
+          "event": "Empire rejects gift from outsiders",
+          "tone": "light",
+          "scenes": [
             {
-              "question" : "Why is the Empire receiving a gift from the outsiders?",
-              "setting" : "With the outsider leader in their palace. After Empire's rejection.",
-              "notes" : "The messenger is \"Zara\"con, from another scene.",
-              "requiredCharacters" : [
+              "question": "Why is the Empire receiving a gift from the outsiders?",
+              "setting": "With the outsider leader in their palace. After Empire's rejection.",
+              "notes": "The messenger is \"Zara\"con, from another scene.",
+              "tone": "light",
+              "characters": [
                 {
                   "character": "Outsider Queen",
-                  "thoughts" : "Anticipates an abundance of destruction"
+                  "thoughts": "Anticipates an abundance of destruction"
                 },
                 {
-                  "character" : "Outsider Guard Captain",
-                  "thoughts" : "Enjoys downtime"
+                  "character": "Outsider Guard Captain",
+                  "thoughts": "Enjoys downtime"
                 },
                 {
-                  "character" : "Spritual Leader",
-                  "thoughts" : "This administration is immoral!"
+                  "character": "Spritual Leader",
+                  "thoughts": "This administration is immoral!"
                 },
                 {
                   "character": "Messenger",
-                  "thoughts" : "Nervous about the fate they are about to receive and begin to feel angry about the Empire."
+                  "thoughts": "Nervous about the fate they are about to receive and begin to feel angry about the Empire."
                 }
               ],
-              "plot" : "Meeting has been announced. Spirtual Leader was not invited. He is furious and on his way there. Messenger gives news that the gift has been rejected. Spiritual Leader busts in and accuses Outsider Queen of not doing enough. Outsider Queen calls out Outside Guard Captain for not doing his job and keeping the rabble out. Outsider Guard Captain defends Spiritual Leader. Outsider Queen is apprehensive to go to war. The Empire is weak and the Outsider Queen and Spiritual Leader agree on this. The Outsider Queen wants to play the long game and have the Empire destroy themselves from within.",
-              "answer" : "The gift was supposed to sow internal discord so that the Empire ends up destroying themselves."
+              "plot": "Meeting has been announced. Spirtual Leader was not invited. He is furious and on his way there. Messenger gives news that the gift has been rejected. Spiritual Leader busts in and accuses Outsider Queen of not doing enough. Outsider Queen calls out Outside Guard Captain for not doing his job and keeping the rabble out. Outsider Guard Captain defends Spiritual Leader. Outsider Queen is apprehensive to go to war. The Empire is weak and the Outsider Queen and Spiritual Leader agree on this. The Outsider Queen wants to play the long game and have the Empire destroy themselves from within.",
+              "answer": "The gift was supposed to sow internal discord so that the Empire ends up destroying themselves."
             }
           ]
         },
         {
           "event": "The outsiders are angered by the Empire's rejection",
-          "tone" :"dark",
-          "scenes" : [
-
+          "tone": "dark",
+          "scenes": [
+            {
+              "question": "How was the Emperor killed?",
+              "answer": "The Outsider Messenger kills him.",
+              "setting": "In the Emperor's palace on a rugged seaside planet (lots of Cliffs of Dover). The Outsider's ships have just appeared on the cliffside.",
+              "notes": "The Outsiders are from two galaxies away. The Emperor is considered evil.",
+              "tone": "dark",
+              "characters": [
+                {
+                  "character": "The Emperor",
+                  "thoughts": "No means no."
+                },
+                {
+                  "character": "Outsider's Traitor",
+                  "thoughts": "Worried that they don't have a plan."
+                },
+                {
+                  "character": "Ocean Demi God",
+                  "thoughts": "Expecting a blood sacrifice."
+                },
+                {
+                  "character": "Executive Assistant to the Emperor",
+                  "thoughts": "Worried about the Emperor's safety."
+                }
+              ],
+              "plot": "Ships in the ocean, guards have alerted the Executive Assistant to the Emperor that the Outsiders are here. Emperor refuses to speak to them, he is in his office. The Emperor sends the Executive Assistant away for food and drink. The waves are rising, a good sign for the Traitor. The Traitor waits for high tide then leaves for the city. The Outsider Messenger flies ships into the palace courtyard. The Executive Assistant runs away to the Emperor and they confront the Outsider Messenger together. Ships are in the courtyard, the Traitor sees the Emperor. The Emperor orders the destruction of the Outsiders. The Outsider Messenger takes the Emperor hostage. The Traitor encounters the Executive Assistant, and is recognized as an Outsider because the Traitor has too many faces (morphing). The Traitor reveals that the Messenger is evil and that the Outsiders feed off of destruction. The Captain of the Militia arrests the Traitor and takes them to the palace. Rogue waves lash the cliffs and the Outsider ships, caused by the restless Demi God. The Traitor unconsciously wears the face of the Captain's lover. The Traitor takes the Captain's gun. The Executive Assistant recaptures adn then interrogates the Traitor. The Outsiders have not destroyed anything in a long time and it makes them desperate. The waves are crashing up near the palace. The Executive Assistant calls for an exchange: Traitor for Emperor. The palace is starting to flood. The Traitor shoots at the Emperor and wounds him. Whole courtyard erupts into a firefight. The Messenger finishes off the Emperor lying at his feet."
+            }
           ]
+        },
+        {
+          "event": "The Traitor is confronted by the Ocean Demi God about their punishment",
+          "tone": "dark"
+        }
+      ]
+    },
+    {
+      "period": "The Empire fights a bloody war against the Outsiders",
+      "tone": "dark",
+      "events": [
+        {
+        }
+      ]
+    },
+    {
+      "period": "An independent block leaves the Empire through peaceful revolution",
+      "tone": "light",
+      "events": [
+        {
+          "event": "Outsider spies instigate legitimate elections (accidentally)",
+          "tone": "light",
+          "scenes": [
+            {
+              "question": "How did the Outsiders save one of their own?",
+              "answer": "The Election Observer helps the Sacrifice to escape",
+              "tone": "dark",
+              "setting": "The capital's next door neighor planet/system. During an election season to pick the next blood sacrifice. This planet's demi god doesn't want blood sacrifices.",
+              "notes": "",
+              "characters": [
+                {
+                  "character": "Election Observer",
+                  "thoughts": "Things will go as planned"
+                },
+                {
+                  "character": "Front Runner",
+                  "thoughts": "Oh my God I'm going to die"
+                },
+                {
+                  "character": "Demi God of Wealth",
+                  "thoughts": "Why are they doing this I don't like dead bodies"
+                },
+                {
+                  "character": "Old Spy",
+                  "thoughts": "Gotta (un)fix the election"
+                },
+                {
+                  "character": "Sham Nominee (Runner Up)",
+                  "thoughts": "Totally not gonna sacrificed. Loving' the attention"
+                }
+              ],
+              "plot": "Center of town. Front Runner talks to the Demi God to make a deal. Demi God wants $. Observer and Runner Up have a conversation: Things gonna be good, gonna keep going forever. Never talked to Demi God. What does a Demi God of Wealth do with all the bodies? The bodies are left in the temples. Spy sneaks into the temple and records the Demi God saying that the corpses are disgusting. Both nominees are supposed to be in the square. No chance for the Runner Up to win, the Observer has everything perfectly rigged. Need to find the other sacrifice. The campaigns talking about the nominees paint the Front Runner as the best for sacrifice. Old Spy finds other Outsider spies. All the speeches and campaigning is over. People are casting votes. The Observer makes sure that their votes are correct. Wealth God booms over 98%, Wealth God doesn't want Front Runner, the poor will prosper if they heed the Wealth God. Observer goes on stage and says the Front Runner has won and we need the sacrifice knife. Front Runner plays the recording of the Wealth God into the mic. Mob breaks out, angry. Observer takes Front Runner away. The Mob is attacking the Runner Up. The Runner Up is going to be the sacrifice. The Runner Up throws money at the Mob. Wealth God thinks this is all awful. Observer drags Front Runner away and reveals that he's an Outsider, just like the Front Runner. The Observer gives the sacrificial knife to the Front Runner and tells them to go home, their work is done: they've sowed destruction for the Outsider Queen by instigating the Mob."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "period": "A galactic militia oppresses the people",
+      "tone": "dark",
+      "events": [
+        {
+          "event": "The Militia discovers a faster and more efficient way to travel the galaxy",
+          "tone": "dark"
+        }
+      ]
+    },
+    {
+      "period": "A golden age of cross-galactic exploration",
+      "tone": "light",
+      "bookend": "end",
+      "events": [
+        {
+          "event": "A post-Imperial scout ship encounters a village of semi-feral Outsider youth",
+          "tone": "light"
         }
       ]
     }
   ]
-
 }
