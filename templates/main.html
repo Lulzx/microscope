@@ -3,47 +3,70 @@
 </big-picture>
 
 <focuses>
+    <h2>Focuses</h2>
     {{#each focuses}}
-    <focus>{{this.focus}}, {{this.player}}</focus>
+    <li>{{this.focus}}, {{this.player}}</li>
     {{/each}}
 </focuses>
 
 <palette>
+    <h2>Palette</h2>
     <add>
-        <li>q continuum types (demi gods)</li>
-        <li>"pre warp" humans</li>
-        <li>"babelfish"</li>
+        <h3>Adds</h3>
+        {{#each palette.adds}}
+        <li>{{this}}</li>
+        {{/each}}
     </add>
     <ban>
-        <li>infinite power, in a single being</li>
-        <li>time travel</li>
+        <h3>Bans</h3>
+        {{#each palette.bans}}
+        <li>{{this}}</li>
+        {{/each}}
     </ban>
 </palette>
 
 <legacies>
-    <li>TRAITORS ARE ALWAYS, WITHOUT FAIL, NO EXCEPTIONS PUNISHED BY DEMI GODS, Anastasia</li>
+    <h2>Legacies</h2>
+    {{#each legacies}}
+    <li>{{this.legacy}}, {{this.player}}</li>
+    {{/each}}
 </legacies>
 
-<period class="bookend">
-    <h1>The empire fights a war that sows the first seeds of dissent</h1>
-    <tone>dark</tone>
-    <event>
-        <scene>
+<periods>
+    <h2>Periods</h2>
+    {{#each periods}}
+    <h3>{{this.period}}</h3>
+    <i class="{{this.tone}}">{{this.tone}}</i>
 
-        </scene>
-    </event>
-</period>
+        {{#each this.events}}
+        <event>
+        <h4>{{this.event}}</h4>
+        <i class="{{this.tone}}">{{this.tone}}</i>
 
-<period class="bookend">
-    <h1>A golden age of cross-galactic exploration</h1>
-    <tone>light</tone>
-    <event>
-        <scene>
+            {{#each this.scenes}}
+            <scene>
+            <h5>{{this.question}}</h5>
+            <h5>{{this.answer}}</h5>
+            <i class="{{this.tone}}">{{this.tone}}</i>
 
-        </scene>
-    </event>
-</period>
+            <h6>Setting</h6>
+            <p>{{this.setting}}</p>
 
-<legacies>
+            <h6>Notes</h6>
+            <p>{{this.notes}}</p>
 
-</legacies>
+            <h6>Required Characters</h6>
+                {{#each this.requiredCharacters}}
+                <li>{{this.character}}, <em>{{this.thoughts}}</em></li>
+                {{/each}}
+
+            <h6>Plot</h6>
+            <p>{{this.plot}}</p>
+            {{/each}}
+            </scene>
+        </event>
+        {{/each}}
+
+
+    {{/each}}
+</periods>

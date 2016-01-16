@@ -31,6 +31,7 @@
   "periods" : [
     {
       "period" : "The empire fights a war that sows the first seeds of dissent",
+      "bookend" : true,
       "tone" : "dark",
       "events" : [
         {
@@ -42,7 +43,7 @@
           "tone" : "light",
           "scenes" : [
             {
-              "question" : "Why is the Empire receiving a gift from the outsiders",
+              "question" : "Why is the Empire receiving a gift from the outsiders?",
               "setting" : "With the outsider leader in their palace. After Empire's rejection.",
               "notes" : "The messenger is \"Zara\"con, from another scene.",
               "requiredCharacters" : [
@@ -66,6 +67,13 @@
               "plot" : "Meeting has been announced. Spirtual Leader was not invited. He is furious and on his way there. Messenger gives news that the gift has been rejected. Spiritual Leader busts in and accuses Outsider Queen of not doing enough. Outsider Queen calls out Outside Guard Captain for not doing his job and keeping the rabble out. Outsider Guard Captain defends Spiritual Leader. Outsider Queen is apprehensive to go to war. The Empire is weak and the Outsider Queen and Spiritual Leader agree on this. The Outsider Queen wants to play the long game and have the Empire destroy themselves from within.",
               "answer" : "The gift was supposed to sow internal discord so that the Empire ends up destroying themselves."
             }
+          ]
+        },
+        {
+          "event": "The outsiders are angered by the Empire's rejection",
+          "tone" :"dark",
+          "scenes" : [
+
           ]
         }
       ]
