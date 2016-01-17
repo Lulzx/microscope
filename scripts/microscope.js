@@ -24,11 +24,6 @@ Microscope.ajax.get = function(url) {
 Microscope.ajax.get("first_game.json").done(function(data) {
     var json = JSON.parse(data.responseText);
     Microscope.ajax.get("templates/main.html").done(function(data) {
-        var renderedData = render(json, data.responseText);
-        document.body.innerHTML = renderedData;
+        document.body.innerHTML = Handlebars.compile(data.responseText)(json);
     });
 });
-
-function render(json, html) {
-    return Handlebars.compile(html)(json);
-}
