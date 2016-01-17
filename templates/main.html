@@ -47,7 +47,10 @@
 
             {{#each this.scenes}}
             <scene>
-                <h5><icon class="{{this.tone}}"></icon> {{this.question}} {{this.answer}}</h5>
+                <hgroup>
+                    <icon class="{{this.tone}}"></icon>
+                    <h5> {{this.question}} {{this.answer}}</h5>
+                </hgroup>
 
                 <section>
                     <h6>Setting</h6>

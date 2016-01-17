@@ -21,19 +21,33 @@ scene {
     display: block;
 }
 
-scene h5 {
+scene hgroup {
     border: 1px solid black;
-    padding: 1rem;
+    display: flex;
+    padding: 0.5rem;
+}
+
+scene hgroup icon {
+    flex: 1 1 5%;
+    text-align: center;
+}
+
+scene hgroup h5 {
+    align-self: center;
+    flex: 1 1 90%;
+    margin: 0;
 }
 
 scene section {
     border: 1px solid black;
+    border-top: 0;
     height: 0;
     overflow: hidden;
+    padding: 0 1rem;
     transition: all 0.5s ease-in-out;
 }
 
-scene h5:hover + section {
+scene hgroup:hover + section {
     height: 50px;
     padding: 1rem;
 }
@@ -46,6 +60,15 @@ li {
 h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0 0 1rem 0;
+}
+
+icon {
+    position:relative;
+    top: 0.1rem;
+}
+
+scene icon {
+    top: 0;
 }
 
 .dark:before, .light:before {
