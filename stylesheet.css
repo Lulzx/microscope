@@ -7,7 +7,7 @@ big-picture {
 
 }
 
-focuses, palette, legacies, periods, event, scene, add, ban {
+focuses, palette, legacies, periods, event, add, ban {
     display: block;
     border: 1px solid black;
     padding: 1.5rem;
@@ -15,6 +15,27 @@ focuses, palette, legacies, periods, event, scene, add, ban {
 
 add, ban {
     margin-left: 1rem;
+}
+
+scene {
+    display: block;
+}
+
+scene h5 {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+scene section {
+    border: 1px solid black;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+scene h5:hover + section {
+    height: 50px;
+    padding: 1rem;
 }
 
 li {

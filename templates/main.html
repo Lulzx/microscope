@@ -49,22 +49,24 @@
             <scene>
                 <h5><icon class="{{this.tone}}"></icon> {{this.question}} {{this.answer}}</h5>
 
-                <h6>Setting</h6>
+                <section>
+                    <h6>Setting</h6>
 
-                <p>{{this.setting}}</p>
+                    <p>{{this.setting}}</p>
 
-                <h6>Notes</h6>
+                    <h6>Notes</h6>
 
-                <p>{{this.notes}}</p>
+                    <p>{{this.notes}}</p>
 
-                <h6>Characters</h6>
-                {{#each this.characters}}
-                <li>{{this.character}}, <em>{{this.thoughts}}</em></li>
-                {{/each}}
+                    <h6>Characters</h6>
+                    {{#each this.characters}}
+                    <li>{{this.character}}, <em>{{this.thoughts}}</em></li>
+                    {{/each}}
 
-                <h6>Plot</h6>
+                    <h6>Plot</h6>
 
-                <p>{{this.plot}}</p>
+                    <p>{{this.plot}}</p>
+                </section>
                 {{/each}}
             </scene>
         </event>
