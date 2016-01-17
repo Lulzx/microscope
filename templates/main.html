@@ -37,17 +37,17 @@
     <h2>Periods</h2>
     {{#each periods}}
     <period>
-        <h3>{{this.period}} <i class="{{this.tone}}"></i></h3>
+        <h3>{{this.period}} <icon class="{{this.tone}}"></icon></h3>
 
 
         {{#each this.events}}
         <event>
-            <h4>{{this.event}} <i class="{{this.tone}}"></i></h4>
+            <h4>{{this.event}} <icon class="{{this.tone}}"></icon></h4>
 
 
             {{#each this.scenes}}
             <scene>
-                <h5><i class="{{this.tone}}"></i> {{this.question}} {{this.answer}}</h5>
+                <h5><icon class="{{this.tone}}"></icon> {{this.question}} {{this.answer}}</h5>
 
                 <h6>Setting</h6>
 
