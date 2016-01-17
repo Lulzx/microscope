@@ -4,32 +4,40 @@
 
 <focuses>
     <h2>Focuses</h2>
+    <ul>
     {{#each focuses}}
     <li>{{this.focus}}, {{this.player}}</li>
     {{/each}}
+    </ul>
 </focuses>
 
 <palette>
     <h2>Palette</h2>
     <add>
         <h3>Adds</h3>
+        <ul>
         {{#each palette.adds}}
         <li>{{this}}</li>
         {{/each}}
+        </ul>
     </add>
     <ban>
         <h3>Bans</h3>
+        <ul>
         {{#each palette.bans}}
         <li>{{this}}</li>
         {{/each}}
+        </ul>
     </ban>
 </palette>
 
 <legacies>
     <h2>Legacies</h2>
+    <ul>
     {{#each legacies}}
     <li>{{this.legacy}}, {{this.player}}</li>
     {{/each}}
+    </ul>
 </legacies>
 
 <periods>
@@ -39,12 +47,12 @@
     <period>
         <h3>{{this.period}} <icon class="{{this.tone}}"></icon></h3>
 
-
+        <events>
         {{#each this.events}}
         <event>
             <h4>{{this.event}} <icon class="{{this.tone}}"></icon></h4>
 
-
+            <scenes>
             {{#each this.scenes}}
             <scene>
                 <hgroup>
@@ -63,17 +71,19 @@
 
                     <h6>Characters</h6>
                     {{#each this.characters}}
-                    <li>{{this.character}}, <em>{{this.thoughts}}</em></li>
+                    <p>{{this.character}}, <em>{{this.thoughts}}</em></p>
                     {{/each}}
 
                     <h6>Plot</h6>
 
                     <p>{{this.plot}}</p>
                 </section>
-                {{/each}}
             </scene>
+                {{/each}}
+            </scenes>
         </event>
         {{/each}}
+        </events>
 
     </period>
     {{/each}}

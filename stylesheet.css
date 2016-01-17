@@ -1,30 +1,55 @@
 body {
+    background-color: #222;
     color: #222;
-    font: 20px "Roboto", sans-serif;
+    font: 25px "Roboto", sans-serif;
+}
+
+big-picture, focuses, palette, legacies, periods, period, events, event, scenes, scene {
+    display: block;
+}
+
+period, events, scene {
+    margin-left: 0;
+}
+
+events, scenes {
+    background-color: initial;
+    /* border: 1px solid black; */
+    padding: 0 1rem;
 }
 
 big-picture {
-
+    letter-spacing: 0.05rem;
+    color: #eee;
+    text-align: right;
 }
 
-focuses, palette, legacies, periods, event, add, ban {
-    display: block;
-    border: 1px solid black;
+focuses, palette, legacies, periods {
+    background-color: #eee;
     padding: 1.5rem;
+    margin: 1rem 0;
 }
 
 add, ban {
     margin-left: 1rem;
 }
 
-scene {
-    display: block;
+event {
+    border: 1px solid #222;
+    margin: 1rem 0;
+    padding: 1rem;
 }
 
 scene hgroup {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     padding: 0.5rem;
+}
+
+scene p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-left: 2rem;
 }
 
 scene hgroup icon {
@@ -39,22 +64,23 @@ scene hgroup h5 {
 }
 
 scene section {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-top: 0;
-    height: 0;
+    /* height: 0; */
+    margin-top: 2rem;
     overflow: hidden;
-    padding: 0 1rem;
+    padding: 0 1rem 0 4rem;
     transition: all 0.5s ease-in-out;
 }
 
 scene hgroup:hover + section {
-    height: 50px;
-    padding: 1rem;
+    /*height: 50px;*/
+    /*padding: 1rem;*/
 }
 
 li {
-    margin: 0.5rem 4rem;
-    list-style-type: square;
+    margin: 0.5rem 1rem;
+    list-style-type: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
