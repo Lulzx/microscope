@@ -1,0 +1,19 @@
+{
+  "name": "microscope",
+  "version": "0.0.0",
+  "description": "A Microscope RPG game creator and viewer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worc/microscope.git"
+  },
+  "author": "worc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/worc/microscope/issues"
+  },
+  "homepage": "https://github.com/worc/microscope#readme"
+}
