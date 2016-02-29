@@ -1,16 +1,76 @@
-var BigPicture = React.createClass({
-    getInitialState: function() {
-        return { bigPicture: 'The Big Picture' };
-    },
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
 
-    render: function() {
-        return (
-            <h1 className="big-picture">{this.props.bigPicture}</h1>
-        );
-    }
-});
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
 
-ReactDOM.render(
-    <BigPicture bigPicture="I have no idea" />,
-    document.getElementById('content')
-);
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var BigPicture = React.createClass({
+	    displayName: 'BigPicture',
+
+	    getInitialState: function () {
+	        return { bigPicture: 'The Big Picture' };
+	    },
+
+	    render: function () {
+	        return React.createElement(
+	            'h1',
+	            { className: 'big-picture' },
+	            this.props.bigPicture
+	        );
+	    }
+	});
+
+	ReactDOM.render(React.createElement(BigPicture, { bigPicture: 'I have no idea' }), document.getElementById('content'));
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	module.exports = React;
+
+/***/ }
+/******/ ]);
