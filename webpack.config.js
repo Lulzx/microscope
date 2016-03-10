@@ -8,14 +8,6 @@ module.exports = {
 
     module: {
         loaders: [
-        //{
-        //    test: /\.js$/,
-        //    loader: ['babel'],
-        //    exclude: /node_modules/,
-        //    query: {
-        //        presets: ['react']
-        //    }
-        //},
             {
                 test: /\.jsx?$/,
                 loader: 'babel',
@@ -23,7 +15,6 @@ module.exports = {
                     cacheDirectory: true,
                     presets: ['react', 'es2015']
                 }
-                //include: PATHS.app
             }
         ]
     },
