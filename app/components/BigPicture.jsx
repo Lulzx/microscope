@@ -1,3 +1,7 @@
+'use strict';
+
+var React = require('react');
+
 var BigPicture = React.createClass({
     getInitialState: function() {
         return { bigPicture: 'The Big Picture' };
@@ -9,3 +13,5 @@ var BigPicture = React.createClass({
         );
     }
 });
+
+module.exports = BigPicture;

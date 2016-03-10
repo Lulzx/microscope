@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './app/microscope-react.js',
+    entry: './app/microscope-react.jsx',
 
     output: {
         filename: 'microscope-react.js',
@@ -7,14 +7,25 @@ module.exports = {
     },
 
     module: {
-        loaders: [{
-            test: /\.js$/,
-            loader: ['babel'],
-            exclude: /node_modules/,
-            query: {
-                presets: ['react']
+        loaders: [
+        //{
+        //    test: /\.js$/,
+        //    loader: ['babel'],
+        //    exclude: /node_modules/,
+        //    query: {
+        //        presets: ['react']
+        //    }
+        //},
+            {
+                test: /\.jsx?$/,
+                loader: 'babel',
+                query: {
+                    cacheDirectory: true,
+                    presets: ['react', 'es2015']
+                }
+                //include: PATHS.app
             }
-        }]
+        ]
     },
 
     externals: {

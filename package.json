@@ -29,6 +29,7 @@
     "babel-preset-es2015": "^6.0.15",
     "babel-preset-react": "^6.0.15",
     "babel-preset-stage-0": "^6.0.15",
+    "jsx-loader": "^0.13.2",
     "webpack": "^1.12.2"
   }
 }

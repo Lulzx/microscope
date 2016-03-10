@@ -47,22 +47,19 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var BigPicture = __webpack_require__(2);
 
-	var BigPicture = React.createClass({
-	    displayName: 'BigPicture',
-
-	    getInitialState: function () {
-	        return { bigPicture: 'The Big Picture' };
-	    },
-
-	    render: function () {
-	        return React.createElement(
-	            'h1',
-	            { className: 'big-picture' },
-	            this.props.bigPicture
-	        );
-	    }
-	});
+	//var BigPicture = React.createClass({
+	//    getInitialState: function() {
+	//        return { bigPicture: 'The Big Picture' };
+	//    },
+	//
+	//    render: function() {
+	//        return (
+	//            <h1 className="big-picture">{this.props.bigPicture}</h1>
+	//        );
+	//    }
+	//});
 
 	ReactDOM.render(React.createElement(BigPicture, { bigPicture: 'I have no idea' }), document.getElementById('content'));
 
@@ -71,6 +68,32 @@
 /***/ function(module, exports) {
 
 	module.exports = React;
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var BigPicture = React.createClass({
+	    displayName: 'BigPicture',
+
+	    getInitialState: function getInitialState() {
+	        return { bigPicture: 'The Big Picture' };
+	    },
+
+	    render: function render() {
+	        return React.createElement(
+	            'h1',
+	            { className: 'big-picture' },
+	            this.props.bigPicture
+	        );
+	    }
+	});
+
+	module.exports = BigPicture;
 
 /***/ }
 /******/ ]);
