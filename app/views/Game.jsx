@@ -11,7 +11,7 @@ var Game = React.createClass({
     componentDidMount: function() {
       this.serverRequest = WebAPI.getGameData('/games/first_game.json').done(function(data) {
           console.log(data);
-          this.setState(data);
+          this.setState(JSON.parse(data.response));
       }.bind(this));
     },
 
@@ -22,8 +22,8 @@ var Game = React.createClass({
     render: function() {
         return (
             <div>
-                <BigPicture />
-                <Focuses />
+                <BigPicture bigPicture={this.state.bigPicture} />
+                <Focuses focuses={this.state.focuses} />
             </div>
         );
     }

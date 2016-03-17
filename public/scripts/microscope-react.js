@@ -79,7 +79,7 @@
 	    componentDidMount: function componentDidMount() {
 	        this.serverRequest = WebAPI.getGameData('/games/first_game.json').done(function (data) {
 	            console.log(data);
-	            this.setState(data);
+	            this.setState(JSON.parse(data.response));
 	        }.bind(this));
 	    },
 
@@ -91,8 +91,8 @@
 	        return React.createElement(
 	            'div',
 	            null,
-	            React.createElement(BigPicture, null),
-	            React.createElement(Focuses, null)
+	            React.createElement(BigPicture, { bigPicture: this.state.bigPicture }),
+	            React.createElement(Focuses, { focuses: this.state.focuses })
 	        );
 	    }
 	});
@@ -180,11 +180,17 @@
 	var Focuses = React.createClass({
 	    displayName: 'Focuses',
 
-	    getInitialState: function getInitialState() {
+	    //getInitialState: function() {
+	    //    return { focuses: [] };
+	    //},
+
+	    getDefaultProps: function getDefaultProps() {
 	        return { focuses: [] };
 	    },
 
 	    render: function render() {
+	        console.log(this.props);
+	        //console.log(this.state);
 	        return React.createElement(
 	            'div',
 	            { className: 'focuses' },
@@ -196,7 +202,9 @@
 	            React.createElement(
 	                'ul',
 	                null,
-	                'wat'
+	                this.props.focuses.map(function (value) {
+	                    return React.createElement(Focus, { focus: value.focus, player: value.player });
+	                })
 	            )
 	        );
 	    }
@@ -208,23 +216,23 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(1);
 
 	var Focus = React.createClass({
-	    displayName: 'Focus',
+	    displayName: "Focus",
 
-	    getInitialState: function getInitialState() {
-	        return { focus: 'A focus', player: 'A player' };
-	    },
+	    //getInitialState: function() {
+	    //    return { focus: 'A focus', player: 'A player' };
+	    //},
 
 	    render: function render() {
 	        return React.createElement(
-	            'li',
-	            { className: 'focus' },
+	            "li",
+	            { className: "focus" },
 	            this.props.focus,
-	            ', ',
+	            ", ",
 	            this.props.player
 	        );
 	    }
