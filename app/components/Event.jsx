@@ -1,4 +1,5 @@
 var React = require('react');
+var Scene = require('./Scene.jsx');
 
 var Event = React.createClass({
     getDefaultProps: function() {
@@ -12,8 +13,16 @@ var Event = React.createClass({
     render: function() {
         console.log("Event props", this.props);
         return (
-            <h4>{this.props.event} <icon className={this.props.tone} /></h4>
+            <li className="event">
 
+                <h4>{this.props.event} <icon className={this.props.tone} /></h4>
+
+                <ul className="scenes">
+                {this.props.scenes.map(function(value) {
+                    return <Scene {...value} />
+                })}
+                </ul>
+            </li>
         )
     }
 });

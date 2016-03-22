@@ -541,6 +541,7 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var Scene = __webpack_require__(16);
 
 	var Event = React.createClass({
 	    displayName: 'Event',
@@ -556,16 +557,151 @@
 	    render: function render() {
 	        console.log("Event props", this.props);
 	        return React.createElement(
-	            'h4',
-	            null,
-	            this.props.event,
-	            ' ',
-	            React.createElement('icon', { className: this.props.tone })
+	            'li',
+	            { className: 'event' },
+	            React.createElement(
+	                'h4',
+	                null,
+	                this.props.event,
+	                ' ',
+	                React.createElement('icon', { className: this.props.tone })
+	            ),
+	            React.createElement(
+	                'ul',
+	                { className: 'scenes' },
+	                this.props.scenes.map(function (value) {
+	                    return React.createElement(Scene, value);
+	                })
+	            )
 	        );
 	    }
 	});
 
 	module.exports = Event;
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Character = __webpack_require__(17);
+
+	var Scene = React.createClass({
+	    displayName: 'Scene',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            question: '',
+	            answer: '',
+	            tone: '',
+	            setting: '',
+	            notes: '',
+	            characters: [],
+	            plot: ''
+	        };
+	    },
+
+	    render: function render() {
+	        console.log("Scene props", this.props);
+	        return React.createElement(
+	            'li',
+	            { className: 'scene' },
+	            React.createElement('icon', { className: this.props.tone }),
+	            React.createElement(
+	                'h5',
+	                null,
+	                this.props.question,
+	                ' ',
+	                this.props.answer
+	            ),
+	            React.createElement(
+	                'h6',
+	                null,
+	                'Setting'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                this.props.setting
+	            ),
+	            React.createElement(
+	                'h6',
+	                null,
+	                'Notes'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                this.props.notes
+	            ),
+	            React.createElement(
+	                'h6',
+	                null,
+	                'Characters'
+	            ),
+	            React.createElement(
+	                'ul',
+	                { className: 'characters' },
+	                this.props.characters.map(function (value) {
+	                    return React.createElement(Character, value);
+	                })
+	            ),
+	            React.createElement(
+	                'h6',
+	                null,
+	                'Plot'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                this.props.plot
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Scene;
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Character = React.createClass({
+	    displayName: 'Character',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            character: '',
+	            thoughts: ''
+	        };
+	    },
+
+	    render: function render() {
+	        return React.createElement(
+	            'li',
+	            { className: 'character' },
+	            React.createElement(
+	                'p',
+	                null,
+	                this.props.character,
+	                ', ',
+	                React.createElement(
+	                    'em',
+	                    null,
+	                    this.props.thoughts
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Character;
 
 /***/ }
 /******/ ]);
