@@ -18,24 +18,30 @@ var Scene = React.createClass({
         console.log("Scene props", this.props);
         return (
             <li className="scene">
-                <icon className={this.props.tone} />
-                <h5>{this.props.question} {this.props.answer}</h5>
+                <div className="header">
+                    <icon className={this.props.tone} />
+                    <h5>{this.props.question} {this.props.answer}</h5>
+                </div>
 
-                <h6>Setting</h6>
-                <p>{this.props.setting}</p>
+                <div className="body">
 
-                <h6>Notes</h6>
-                <p>{this.props.notes}</p>
+                    <h6>Setting</h6>
+                    <p>{this.props.setting}</p>
 
-                <h6>Characters</h6>
-                <ul className="characters">
-                    {this.props.characters.map(function(value, i) {
-                        return <Character key={i} {...value} />
-                    })}
-                </ul>
+                    <h6>Notes</h6>
+                    <p>{this.props.notes}</p>
 
-                <h6>Plot</h6>
-                <p>{this.props.plot}</p>
+                    <h6>Characters</h6>
+                    <ul className="characters">
+                        {this.props.characters.map(function(value, i) {
+                            return <Character key={i} {...value} />
+                        })}
+                    </ul>
+
+                    <h6>Plot</h6>
+                    <p>{this.props.plot}</p>
+
+                </div>
             </li>
         )
     }

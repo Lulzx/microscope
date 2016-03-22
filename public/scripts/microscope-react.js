@@ -611,55 +611,63 @@
 	        return React.createElement(
 	            'li',
 	            { className: 'scene' },
-	            React.createElement('icon', { className: this.props.tone }),
 	            React.createElement(
-	                'h5',
-	                null,
-	                this.props.question,
-	                ' ',
-	                this.props.answer
+	                'div',
+	                { className: 'header' },
+	                React.createElement('icon', { className: this.props.tone }),
+	                React.createElement(
+	                    'h5',
+	                    null,
+	                    this.props.question,
+	                    ' ',
+	                    this.props.answer
+	                )
 	            ),
 	            React.createElement(
-	                'h6',
-	                null,
-	                'Setting'
-	            ),
-	            React.createElement(
-	                'p',
-	                null,
-	                this.props.setting
-	            ),
-	            React.createElement(
-	                'h6',
-	                null,
-	                'Notes'
-	            ),
-	            React.createElement(
-	                'p',
-	                null,
-	                this.props.notes
-	            ),
-	            React.createElement(
-	                'h6',
-	                null,
-	                'Characters'
-	            ),
-	            React.createElement(
-	                'ul',
-	                { className: 'characters' },
-	                this.props.characters.map(function (value, i) {
-	                    return React.createElement(Character, _extends({ key: i }, value));
-	                })
-	            ),
-	            React.createElement(
-	                'h6',
-	                null,
-	                'Plot'
-	            ),
-	            React.createElement(
-	                'p',
-	                null,
-	                this.props.plot
+	                'div',
+	                { className: 'body' },
+	                React.createElement(
+	                    'h6',
+	                    null,
+	                    'Setting'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    this.props.setting
+	                ),
+	                React.createElement(
+	                    'h6',
+	                    null,
+	                    'Notes'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    this.props.notes
+	                ),
+	                React.createElement(
+	                    'h6',
+	                    null,
+	                    'Characters'
+	                ),
+	                React.createElement(
+	                    'ul',
+	                    { className: 'characters' },
+	                    this.props.characters.map(function (value, i) {
+	                        return React.createElement(Character, _extends({ key: i }, value));
+	                    })
+	                ),
+	                React.createElement(
+	                    'h6',
+	                    null,
+	                    'Plot'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    this.props.plot
+	                )
 	            )
 	        );
 	    }

@@ -1,69 +1,69 @@
 body {
-    background-color: #fff;
+    background-color: #222;
     color: #222;
     font: 25px "Roboto", sans-serif;
 }
 
-big-picture, focuses, palette, legacies, periods, period, events, event, scenes, scene {
+.focuses, .palette, .legacies, .periods, .period, .events, .event, .scenes, .scene {
     display: block;
 }
 
-period, events, scene {
+.period, .events, .scene {
     margin-left: 0;
 }
 
-events, scenes {
+.events, .scenes {
     background-color: initial;
     /* border: 1px solid black; */
     padding: 0 1rem;
 }
 
-big-picture {
+.big-picture {
     letter-spacing: 0.05rem;
     color: #eee;
     text-align: right;
 }
 
-focuses, palette, legacies, periods {
+.focuses, .palette, .legacies, .periods {
     background-color: #eee;
     padding: 1.5rem;
     margin: 1rem 0;
 }
 
-add, ban {
+.add, .ban {
     margin-left: 1rem;
 }
 
-event {
+.event {
     border: 1px solid #222;
     margin: 1rem 0;
     padding: 1rem;
 }
 
-scene hgroup {
+.scene .header {
     /* border: 1px solid black; */
     display: flex;
     padding: 0.5rem;
 }
 
-scene p {
+.scene p {
     font-size: 1.2rem;
     line-height: 1.8rem;
     margin-left: 2rem;
 }
 
-scene hgroup icon {
+.scene .header icon {
     flex: 1 1 5%;
     text-align: center;
 }
 
-scene hgroup h5 {
+.scene .header h5 {
     align-self: center;
     flex: 1 1 90%;
     margin: 0;
 }
 
-scene section {
+.scene .body{
     /* border: 1px solid black; */
     border-top: 0;
     /* height: 0; */
@@ -73,7 +73,7 @@ scene section {
     transition: all 0.5s ease-in-out;
 }
 
-scene hgroup:hover + section {
+.scene .header:hover + section {
     /*height: 50px;*/
     /*padding: 1rem;*/
 }
@@ -93,7 +93,7 @@ icon {
     top: 0.1rem;
 }
 
-scene icon {
+.scene icon {
     top: 0;
 }
 
