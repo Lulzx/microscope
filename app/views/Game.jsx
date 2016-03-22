@@ -4,6 +4,7 @@ var BigPicture = require('../components/BigPicture.jsx');
 var Focuses = require('../components/Focuses.jsx');
 var Palette = require('../components/Palette.jsx');
 var Legacies = require('../components/Legacies.jsx');
+var Periods = require('../components/Periods.jsx');
 
 var Game = React.createClass({
     getInitialState: function() {
@@ -30,6 +31,7 @@ var Game = React.createClass({
                 <Focuses focuses={this.state.focuses} />
                 <Palette palette={this.state.palette} />
                 <Legacies legacies={this.state.legacies} />
+                <Periods periods={this.state.periods} />
             </div>
         );
     }

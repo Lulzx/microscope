@@ -6,4 +6,4 @@ It's honestly a little bit of cargo cult programming, plus some guess and check 
 
 Finding bugs was slowest in the beginning when I had few or no commits to step through to check what was wrong. Initial setup and configuration was also challenging just on the lack of documentation out there. The most serious case of cargo cult programming in this project is the webpack config. It works, I don't know why, it came from many different sources and was whittled down to what it is now through trial and error. And it's the main reason I'm sticking with CommonJS right now, I don't know if I want to spend the time reconfiguring something that already (somewhat mysteriously) works.
  
- 
+ *i mean, it's a readme, it should tell you what the app is, what its features are, and what its known limits are*

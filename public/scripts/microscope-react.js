@@ -70,6 +70,7 @@
 	var Focuses = __webpack_require__(6);
 	var Palette = __webpack_require__(8);
 	var Legacies = __webpack_require__(11);
+	var Periods = __webpack_require__(13);
 
 	var Game = React.createClass({
 	    displayName: 'Game',
@@ -98,7 +99,8 @@
 	            React.createElement(BigPicture, { bigPicture: this.state.bigPicture }),
 	            React.createElement(Focuses, { focuses: this.state.focuses }),
 	            React.createElement(Palette, { palette: this.state.palette }),
-	            React.createElement(Legacies, { legacies: this.state.legacies })
+	            React.createElement(Legacies, { legacies: this.state.legacies }),
+	            React.createElement(Periods, { periods: this.state.periods })
 	        );
 	    }
 	});
@@ -223,6 +225,9 @@
 	var Focus = React.createClass({
 	    displayName: "Focus",
 
+	    //todo find out if getInitialState and getDefaultProps are necessary functions
+	    //todo it seems like getDefaultProps is a half-decent way to note the object type the render function is expecting
+	    //todo but maybe both functions can be omitted when they're just going to blank anyways
 	    //getInitialState: function() {
 	    //    return { focus: 'A focus', player: 'A player' };
 	    //},
@@ -439,6 +444,88 @@
 	});
 
 	module.exports = Legacy;
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Period = __webpack_require__(14);
+
+	var Periods = React.createClass({
+	    displayName: 'Periods',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            periods: []
+	        };
+	    },
+
+	    render: function render() {
+	        console.log('Periods props', this.props);
+	        return React.createElement(
+	            'div',
+	            { className: 'periods' },
+	            React.createElement(
+	                'h2',
+	                null,
+	                'Periods'
+	            ),
+	            React.createElement(
+	                'ul',
+	                null,
+	                this.props.periods.map(function (value) {
+	                    return React.createElement(Period, { period: value });
+	                })
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Periods;
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Period = React.createClass({
+	    displayName: 'Period',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            period: {
+	                period: '',
+	                bookend: '',
+	                tone: '',
+	                events: []
+
+	            }
+	        };
+	    },
+
+	    render: function render() {
+	        console.log("Period props", this.props);
+	        return React.createElement(
+	            'li',
+	            { className: this.props.period.bookend },
+	            React.createElement(
+	                'h3',
+	                null,
+	                this.props.period.period,
+	                ' ',
+	                React.createElement('icon', { className: this.props.period.tone })
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Period;
 
 /***/ }
 /******/ ]);
