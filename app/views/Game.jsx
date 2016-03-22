@@ -2,6 +2,7 @@ var React = require('react');
 var WebAPI = require('../utils/WebAPI.js');
 var BigPicture = require('../components/BigPicture.jsx');
 var Focuses = require('../components/Focuses.jsx');
+var Palette = require('../components/Palette.jsx');
 
 var Game = React.createClass({
     getInitialState: function() {
@@ -10,7 +11,7 @@ var Game = React.createClass({
 
     componentDidMount: function() {
       this.serverRequest = WebAPI.getGameData('/games/first_game.json').done(function(data) {
-          console.log(data);
+          console.log("ComponentDidMount", data);
           this.setState(JSON.parse(data.response));
       }.bind(this));
     },
@@ -20,10 +21,13 @@ var Game = React.createClass({
     },
 
     render: function() {
+        console.log("Game Render, state", this.state);
+        console.log("Game Render, state.palette", this.state.palette);
         return (
             <div>
                 <BigPicture bigPicture={this.state.bigPicture} />
                 <Focuses focuses={this.state.focuses} />
+                <Palette palette={this.state.palette} />
             </div>
         );
     }

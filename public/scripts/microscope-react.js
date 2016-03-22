@@ -68,6 +68,7 @@
 	var WebAPI = __webpack_require__(3);
 	var BigPicture = __webpack_require__(5);
 	var Focuses = __webpack_require__(6);
+	var Palette = __webpack_require__(8);
 
 	var Game = React.createClass({
 	    displayName: 'Game',
@@ -78,7 +79,7 @@
 
 	    componentDidMount: function componentDidMount() {
 	        this.serverRequest = WebAPI.getGameData('/games/first_game.json').done(function (data) {
-	            console.log(data);
+	            console.log("ComponentDidMount", data);
 	            this.setState(JSON.parse(data.response));
 	        }.bind(this));
 	    },
@@ -88,11 +89,14 @@
 	    },
 
 	    render: function render() {
+	        console.log("Game Render, state", this.state);
+	        console.log("Game Render, state.palette", this.state.palette);
 	        return React.createElement(
 	            'div',
 	            null,
 	            React.createElement(BigPicture, { bigPicture: this.state.bigPicture }),
-	            React.createElement(Focuses, { focuses: this.state.focuses })
+	            React.createElement(Focuses, { focuses: this.state.focuses }),
+	            React.createElement(Palette, { palette: this.state.palette })
 	        );
 	    }
 	});
@@ -153,7 +157,7 @@
 	var BigPicture = React.createClass({
 	    displayName: 'BigPicture',
 
-	    getInitialState: function getInitialState() {
+	    getDefaultProps: function getDefaultProps() {
 	        return { bigPicture: 'The Big Picture' };
 	    },
 
@@ -180,17 +184,11 @@
 	var Focuses = React.createClass({
 	    displayName: 'Focuses',
 
-	    //getInitialState: function() {
-	    //    return { focuses: [] };
-	    //},
-
 	    getDefaultProps: function getDefaultProps() {
 	        return { focuses: [] };
 	    },
 
 	    render: function render() {
-	        console.log(this.props);
-	        //console.log(this.state);
 	        return React.createElement(
 	            'div',
 	            { className: 'focuses' },
@@ -239,6 +237,130 @@
 	});
 
 	module.exports = Focus;
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Adds = __webpack_require__(9);
+	var Bans = __webpack_require__(10);
+
+	var Palette = React.createClass({
+	    displayName: 'Palette',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            palette: {
+	                adds: [],
+	                bans: []
+	            }
+	        };
+	    },
+
+	    render: function render() {
+	        console.log("Palette", this.props);
+	        return React.createElement(
+	            'div',
+	            { className: 'palette' },
+	            React.createElement(
+	                'h2',
+	                null,
+	                'Palette'
+	            ),
+	            React.createElement(Adds, { adds: this.props.palette.adds }),
+	            React.createElement(Bans, { bans: this.props.palette.bans })
+	        );
+	    }
+	});
+
+	module.exports = Palette;
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var Adds = React.createClass({
+	    displayName: "Adds",
+
+	    getDefaultProps: function getDefaultProps() {
+	        return { adds: [] };
+	    },
+
+	    render: function render() {
+	        console.log("Adds", this.props);
+	        return React.createElement(
+	            "div",
+	            null,
+	            React.createElement(
+	                "h3",
+	                null,
+	                "Adds"
+	            ),
+	            React.createElement(
+	                "ul",
+	                { className: "adds" },
+	                this.props.adds.map(function (value) {
+	                    return React.createElement(
+	                        "li",
+	                        null,
+	                        value
+	                    );
+	                })
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Adds;
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var Bans = React.createClass({
+	    displayName: "Bans",
+
+	    getDefaultProps: function getDefaultProps() {
+	        return { bans: [] };
+	    },
+
+	    render: function render() {
+	        console.log("Bans", this.props);
+	        return React.createElement(
+	            "div",
+	            null,
+	            React.createElement(
+	                "h3",
+	                null,
+	                "Bans"
+	            ),
+	            React.createElement(
+	                "ul",
+	                { className: "bans" },
+	                this.props.bans.map(function (value) {
+	                    return React.createElement(
+	                        "li",
+	                        null,
+	                        value
+	                    );
+	                })
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Bans;
 
 /***/ }
 /******/ ]);

@@ -1,7 +1,7 @@
 var React = require('react');
 
 var BigPicture = React.createClass({
-    getInitialState: function() {
+    getDefaultProps: function() {
         return { bigPicture: 'The Big Picture' };
     },
 
