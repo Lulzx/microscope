@@ -91,6 +91,8 @@
 	    },
 
 	    render: function render() {
+	        //todo fix the naming convention that causes weird object nesting:
+	        //todo as in, period.period, event.event, and so on
 	        console.log("Game Render, state", this.state);
 	        console.log("Game Render, state.palette", this.state.palette);
 	        return React.createElement(
@@ -493,6 +495,7 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
+	var Event = __webpack_require__(15);
 
 	var Period = React.createClass({
 	    displayName: 'Period',
@@ -520,12 +523,52 @@
 	                this.props.period.period,
 	                ' ',
 	                React.createElement('icon', { className: this.props.period.tone })
+	            ),
+	            React.createElement(
+	                'ul',
+	                null,
+	                this.props.period.events.map(function (value) {
+	                    return React.createElement(Event, value);
+	                })
 	            )
 	        );
 	    }
 	});
 
 	module.exports = Period;
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Event = React.createClass({
+	    displayName: 'Event',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            event: '',
+	            tone: '',
+	            scenes: []
+	        };
+	    },
+
+	    render: function render() {
+	        console.log("Event props", this.props);
+	        return React.createElement(
+	            'h4',
+	            null,
+	            this.props.event,
+	            ' ',
+	            React.createElement('icon', { className: this.props.tone })
+	        );
+	    }
+	});
+
+	module.exports = Event;
 
 /***/ }
 /******/ ]);
