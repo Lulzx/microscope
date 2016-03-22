@@ -5,10 +5,8 @@ var Bans = require('./Bans.jsx');
 var Palette = React.createClass({
     getDefaultProps: function(){
        return {
-               palette: {
-                   adds: [],
-                   bans: []
-               }
+               adds: [],
+               bans: []
        };
     },
 
@@ -17,8 +15,8 @@ var Palette = React.createClass({
         return (
             <div className="palette">
                 <h2>Palette</h2>
-                <Adds adds={this.props.palette.adds} />
-                <Bans bans={this.props.palette.bans} />
+                <Adds adds={this.props.adds} />
+                <Bans bans={this.props.bans} />
             </div>
         );
 

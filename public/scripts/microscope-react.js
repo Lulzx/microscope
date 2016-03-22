@@ -91,16 +91,13 @@
 	    },
 
 	    render: function render() {
-	        //todo fix the naming convention that causes weird object nesting:
-	        //todo as in, period.period, event.event, and so on
 	        console.log("Game Render, state", this.state);
-	        console.log("Game Render, state.palette", this.state.palette);
 	        return React.createElement(
 	            'div',
 	            null,
 	            React.createElement(BigPicture, { bigPicture: this.state.bigPicture }),
 	            React.createElement(Focuses, { focuses: this.state.focuses }),
-	            React.createElement(Palette, { palette: this.state.palette }),
+	            React.createElement(Palette, this.state.palette),
 	            React.createElement(Legacies, { legacies: this.state.legacies }),
 	            React.createElement(Periods, { periods: this.state.periods })
 	        );
@@ -220,26 +217,26 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var React = __webpack_require__(1);
 
 	var Focus = React.createClass({
-	    displayName: "Focus",
+	    displayName: 'Focus',
 
-	    //todo find out if getInitialState and getDefaultProps are necessary functions
-	    //todo it seems like getDefaultProps is a half-decent way to note the object type the render function is expecting
-	    //todo but maybe both functions can be omitted when they're just going to blank anyways
-	    //getInitialState: function() {
-	    //    return { focus: 'A focus', player: 'A player' };
-	    //},
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            focus: '',
+	            player: ''
+	        };
+	    },
 
 	    render: function render() {
 	        return React.createElement(
-	            "li",
-	            { className: "focus" },
+	            'li',
+	            { className: 'focus' },
 	            this.props.focus,
-	            ", ",
+	            ', ',
 	            this.props.player
 	        );
 	    }
@@ -262,10 +259,8 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            palette: {
-	                adds: [],
-	                bans: []
-	            }
+	            adds: [],
+	            bans: []
 	        };
 	    },
 
@@ -279,8 +274,8 @@
 	                null,
 	                'Palette'
 	            ),
-	            React.createElement(Adds, { adds: this.props.palette.adds }),
-	            React.createElement(Bans, { bans: this.props.palette.bans })
+	            React.createElement(Adds, { adds: this.props.adds }),
+	            React.createElement(Bans, { bans: this.props.bans })
 	        );
 	    }
 	});

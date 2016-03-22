@@ -22,9 +22,7 @@ var Legacies = React.createClass({
                     {this.props.legacies.map(function(value) {
                         return <Legacy legacy={value.legacy} player={value.player} />
                     })}
-
                 </ul>
-
             </div>
         )
     }

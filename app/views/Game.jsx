@@ -23,15 +23,12 @@ var Game = React.createClass({
     },
 
     render: function() {
-        //todo fix the naming convention that causes weird object nesting:
-        //todo as in, period.period, event.event, and so on
         console.log("Game Render, state", this.state);
-        console.log("Game Render, state.palette", this.state.palette);
         return (
             <div>
                 <BigPicture bigPicture={this.state.bigPicture} />
                 <Focuses focuses={this.state.focuses} />
-                <Palette palette={this.state.palette} />
+                <Palette {...this.state.palette} />
                 <Legacies legacies={this.state.legacies} />
                 <Periods periods={this.state.periods} />
             </div>
