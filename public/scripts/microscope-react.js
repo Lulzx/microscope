@@ -479,7 +479,7 @@
 	                'ul',
 	                null,
 	                this.props.periods.map(function (value) {
-	                    return React.createElement(Period, { period: value });
+	                    return React.createElement(Period, value);
 	                })
 	            )
 	        );
@@ -502,13 +502,10 @@
 
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            period: {
-	                period: '',
-	                bookend: '',
-	                tone: '',
-	                events: []
-
-	            }
+	            period: '',
+	            bookend: '',
+	            tone: '',
+	            events: []
 	        };
 	    },
 
@@ -516,18 +513,18 @@
 	        console.log("Period props", this.props);
 	        return React.createElement(
 	            'li',
-	            { className: this.props.period.bookend },
+	            { className: this.props.bookend },
 	            React.createElement(
 	                'h3',
 	                null,
-	                this.props.period.period,
+	                this.props.period,
 	                ' ',
-	                React.createElement('icon', { className: this.props.period.tone })
+	                React.createElement('icon', { className: this.props.tone })
 	            ),
 	            React.createElement(
 	                'ul',
 	                null,
-	                this.props.period.events.map(function (value) {
+	                this.props.events.map(function (value) {
 	                    return React.createElement(Event, value);
 	                })
 	            )

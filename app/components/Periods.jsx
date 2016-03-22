@@ -15,7 +15,7 @@ var Periods = React.createClass({
                 <h2>Periods</h2>
                 <ul>
                     {this.props.periods.map(function(value) {
-                        return <Period period={value} />
+                        return <Period {...value} />
                     })}
                 </ul>
             </div>
