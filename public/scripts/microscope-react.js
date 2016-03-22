@@ -69,6 +69,7 @@
 	var BigPicture = __webpack_require__(5);
 	var Focuses = __webpack_require__(6);
 	var Palette = __webpack_require__(8);
+	var Legacies = __webpack_require__(11);
 
 	var Game = React.createClass({
 	    displayName: 'Game',
@@ -96,7 +97,8 @@
 	            null,
 	            React.createElement(BigPicture, { bigPicture: this.state.bigPicture }),
 	            React.createElement(Focuses, { focuses: this.state.focuses }),
-	            React.createElement(Palette, { palette: this.state.palette })
+	            React.createElement(Palette, { palette: this.state.palette }),
+	            React.createElement(Legacies, { legacies: this.state.legacies })
 	        );
 	    }
 	});
@@ -361,6 +363,82 @@
 	});
 
 	module.exports = Bans;
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Legacy = __webpack_require__(12);
+
+	var Legacies = React.createClass({
+	    displayName: 'Legacies',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            legacies: [{
+	                legacy: '',
+	                player: ''
+	            }]
+	        };
+	    },
+
+	    render: function render() {
+	        console.log('Legacies props', this.props);
+	        return React.createElement(
+	            'div',
+	            { className: 'legacies' },
+	            React.createElement(
+	                'h2',
+	                null,
+	                'Legacies'
+	            ),
+	            React.createElement(
+	                'ul',
+	                { className: 'legacy-list' },
+	                this.props.legacies.map(function (value) {
+	                    return React.createElement(Legacy, { legacy: value.legacy, player: value.player });
+	                })
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Legacies;
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Legacy = React.createClass({
+	    displayName: 'Legacy',
+
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            legacy: '',
+	            player: ''
+	        };
+	    },
+
+	    render: function render() {
+	        console.log('Legacy props', this.props);
+	        return React.createElement(
+	            'li',
+	            null,
+	            this.props.legacy,
+	            ', ',
+	            this.props.player
+	        );
+	    }
+	});
+
+	module.exports = Legacy;
 
 /***/ }
 /******/ ]);

@@ -25,6 +25,10 @@
     {
       "legacy": "TRAITORS ARE ALWAYS, WITHOUT FAIL, NO EXCEPTIONS PUNISHED BY DEMI GODS",
       "player": "anastasia"
+    },
+    {
+      "legacy": "THIS LEGACY IS ONLY A TEST, PLEASE REMOVE WHEN DONE DEBUGGING THE MICROSCOPE REACT APP",
+      "player": "DEV"
     }
   ],
   "periods": [
