@@ -203,8 +203,8 @@
 	            React.createElement(
 	                'ul',
 	                null,
-	                this.props.focuses.map(function (value) {
-	                    return React.createElement(Focus, { focus: value.focus, player: value.player });
+	                this.props.focuses.map(function (value, i) {
+	                    return React.createElement(Focus, { key: i, focus: value.focus, player: value.player });
 	                })
 	            )
 	        );
@@ -310,10 +310,10 @@
 	            React.createElement(
 	                "ul",
 	                { className: "adds" },
-	                this.props.adds.map(function (value) {
+	                this.props.adds.map(function (value, i) {
 	                    return React.createElement(
 	                        "li",
-	                        null,
+	                        { key: i },
 	                        value
 	                    );
 	                })
@@ -352,10 +352,10 @@
 	            React.createElement(
 	                "ul",
 	                { className: "bans" },
-	                this.props.bans.map(function (value) {
+	                this.props.bans.map(function (value, i) {
 	                    return React.createElement(
 	                        "li",
-	                        null,
+	                        { key: i },
 	                        value
 	                    );
 	                })
@@ -400,8 +400,8 @@
 	            React.createElement(
 	                'ul',
 	                { className: 'legacy-list' },
-	                this.props.legacies.map(function (value) {
-	                    return React.createElement(Legacy, { legacy: value.legacy, player: value.player });
+	                this.props.legacies.map(function (value, i) {
+	                    return React.createElement(Legacy, { key: i, legacy: value.legacy, player: value.player });
 	                })
 	            )
 	        );
@@ -448,6 +448,8 @@
 
 	'use strict';
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var React = __webpack_require__(1);
 	var Period = __webpack_require__(14);
 
@@ -473,8 +475,8 @@
 	            React.createElement(
 	                'ul',
 	                null,
-	                this.props.periods.map(function (value) {
-	                    return React.createElement(Period, value);
+	                this.props.periods.map(function (value, i) {
+	                    return React.createElement(Period, _extends({ key: i }, value));
 	                })
 	            )
 	        );
@@ -488,6 +490,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
 	var Event = __webpack_require__(15);
@@ -519,8 +523,8 @@
 	            React.createElement(
 	                'ul',
 	                null,
-	                this.props.events.map(function (value) {
-	                    return React.createElement(Event, value);
+	                this.props.events.map(function (value, i) {
+	                    return React.createElement(Event, _extends({ key: i }, value));
 	                })
 	            )
 	        );
@@ -534,6 +538,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
 	var Scene = __webpack_require__(16);
@@ -564,8 +570,8 @@
 	            React.createElement(
 	                'ul',
 	                { className: 'scenes' },
-	                this.props.scenes.map(function (value) {
-	                    return React.createElement(Scene, value);
+	                this.props.scenes.map(function (value, i) {
+	                    return React.createElement(Scene, _extends({ key: i }, value));
 	                })
 	            )
 	        );
@@ -579,6 +585,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
 	var Character = __webpack_require__(17);
@@ -639,8 +647,8 @@
 	            React.createElement(
 	                'ul',
 	                { className: 'characters' },
-	                this.props.characters.map(function (value) {
-	                    return React.createElement(Character, value);
+	                this.props.characters.map(function (value, i) {
+	                    return React.createElement(Character, _extends({ key: i }, value));
 	                })
 	            ),
 	            React.createElement(

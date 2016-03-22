@@ -29,8 +29,8 @@ var Scene = React.createClass({
 
                 <h6>Characters</h6>
                 <ul className="characters">
-                    {this.props.characters.map(function(value) {
-                        return <Character {...value} />
+                    {this.props.characters.map(function(value, i) {
+                        return <Character key={i} {...value} />
                     })}
                 </ul>
 

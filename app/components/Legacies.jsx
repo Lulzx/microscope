@@ -19,8 +19,8 @@ var Legacies = React.createClass({
             <div className="legacies">
                 <h2>Legacies</h2>
                 <ul className="legacy-list">
-                    {this.props.legacies.map(function(value) {
-                        return <Legacy legacy={value.legacy} player={value.player} />
+                    {this.props.legacies.map(function(value, i) {
+                        return <Legacy key={i} legacy={value.legacy} player={value.player} />
                     })}
                 </ul>
             </div>

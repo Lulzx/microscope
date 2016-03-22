@@ -11,8 +11,8 @@ var Bans = React.createClass({
             <div>
                 <h3>Bans</h3>
                 <ul className="bans">
-                    {this.props.bans.map(function(value) {
-                        return <li>{value}</li>;
+                    {this.props.bans.map(function(value, i) {
+                        return <li key={i}>{value}</li>;
                     })}
 
                 </ul>

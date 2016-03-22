@@ -11,8 +11,8 @@ var Adds = React.createClass({
             <div>
                 <h3>Adds</h3>
                 <ul className="adds">
-                    {this.props.adds.map(function(value) {
-                        return <li>{value}</li>;
+                    {this.props.adds.map(function(value, i) {
+                        return <li key={i}>{value}</li>;
                     })}
 
                 </ul>

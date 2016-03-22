@@ -11,8 +11,8 @@ var Focuses = React.createClass({
             <div className='focuses'>
                 <h2>Focuses</h2>
                 <ul>
-                    {this.props.focuses.map(function(value) {
-                        return <Focus focus={value.focus} player={value.player} />;
+                    {this.props.focuses.map(function(value, i) {
+                        return <Focus key={i} focus={value.focus} player={value.player} />;
                     })}
                 </ul>
             </div>

@@ -4,7 +4,7 @@ var Focus = React.createClass({
     getDefaultProps: function() {
         return {
             focus: '',
-            player: '',
+            player: ''
         }
     },
 
