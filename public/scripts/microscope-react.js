@@ -48,7 +48,6 @@
 
 	var React = __webpack_require__(1);
 	var Game = __webpack_require__(2);
-	var BigPicture = __webpack_require__(5);
 
 	ReactDOM.render(React.createElement(Game, null), document.getElementById('content'));
 

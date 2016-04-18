@@ -18,6 +18,11 @@ var app = express();
 
 //var COMMENTS_FILE = path.join(__dirname, 'comments.json');
 
+//set the templating engine for this instance of the express middleware app:
+app.engine('pug', require('pug'.__express));
+
+
+
 app.set('port', (process.env.PORT || 3000));
 
 app.use('/', express.static(path.join(__dirname, 'public')));
@@ -32,6 +37,17 @@ app.use(function(req, res, next) {
 
     // Disable caching so we'll always get the latest comments.
     res.setHeader('Cache-Control', 'no-cache');
+    next();
+});
+
+app.use('/games/:gameId', function(req, res, next) {
+    console.log(req.method);
+    console.log(req.params.gameId);
+
+
+    //get game.JSON by game ID
+    //create a react rendering
+    res.send('"initial state" react rendering'); //respond with that?
     next();
 });
 
